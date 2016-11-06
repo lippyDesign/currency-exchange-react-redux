@@ -62,7 +62,7 @@ class CurrencyList extends Component {
                 </tbody>
             </table>
             
-            <em>Last updated on {moment(m0.date).format("ll")}. Be mindful of the fact that the banks do not work on the weekends and hollidays, therefore this table doesn't get updated during that time</em>
+            <em>Last updated on {moment(m0.date).format("ll")}. Be mindful of the fact that the banks do not work on the weekends and hollidays, therefore this table doesn't get updated during those times</em>
         </main>;
     }
 
