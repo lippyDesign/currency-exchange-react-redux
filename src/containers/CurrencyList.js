@@ -37,7 +37,12 @@ class CurrencyList extends Component {
 
         // if data is not ready yet, show spinner
         if (!m6.base) {
-            return <div>Loading...</div>
+            return <div className="loadingWrapper">
+            <div>
+                <i className="fa fa-circle-o-notch fa-spin fa-5x"></i>
+                <p>Loading...</p>
+            </div>
+            </div>
         }
         // of data is ready show data
         return <main className="main">
