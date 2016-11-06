@@ -86,7 +86,7 @@ class CurrencyList extends Component {
         return generalArr.map( ({currency, rates}) => {
             return <tr key={currency} onClick={() => this.getData(currency)}>
                 <td>{currency}</td>
-                <td>{Math.round(rates[0] * 1000) / 1000}</td>
+                <td>{rates[0].toFixed(2)}</td>
                 <td>
                     <Sparklines data={rates.reverse()} width={70} height={18}>
                         <SparklinesLine color="white" />
