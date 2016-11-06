@@ -1,0 +1,81 @@
+.body {
+    background: #F1F1F1;
+}
+.main {
+    text-align: center;
+
+    h1 {
+        padding: 50px 10px 10px 10px;
+
+        @media(max-width: 450px) {
+            font-size: 30px;
+        }
+        @media(max-width: 360px) {
+            font-size: 26px;
+        }
+    }
+
+    p {
+        padding: 2px;
+        margin: 1px;
+        font-size: 16px;
+        line-height: 16px;
+        color: #0099CC;
+
+        @media(max-width: 486px) {
+            font-size: 14px;
+        }
+        @media(max-width: 486px) {
+            font-size: 14px;
+        }
+    }
+    p.pp {
+        @media(max-width: 430px) {
+            font-size: 12px;
+        }
+    }
+
+    em {
+        color: tomato;
+    }
+ 
+ .table {
+    text-align: center;
+    margin-top: 30px;
+
+    thead {
+        .tableHeaderItem {
+        text-align: center !important;
+        font-size: 26px;
+
+        @media(max-width: 768px) {
+            font-size: 18px;
+        }
+        @media(max-width: 490px) {
+            font-size: 14px;
+        }
+
+        .foldable {
+            @media(max-width: 408px) {
+                display: none;
+            }
+        }
+    }
+
+    }
+    > tbody {
+        > tr {
+            cursor: pointer;
+            &:hover {
+                background: black !important;
+            }
+
+            > td {
+                vertical-align: middle;
+                font-size: 20px;
+                padding: 0;
+            }
+        }
+    }
+}
+}

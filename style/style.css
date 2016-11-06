@@ -1,0 +1,79 @@
+.body {
+  background: #F1F1F1;
+}
+.main {
+  text-align: center;
+}
+.main h1 {
+  padding: 50px 10px 10px 10px;
+}
+@media (max-width: 450px) {
+  .main h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .main h1 {
+    font-size: 26px;
+  }
+}
+.main p {
+  padding: 2px;
+  margin: 1px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #0099CC;
+}
+@media (max-width: 486px) {
+  .main p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 486px) {
+  .main p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .main p.pp {
+    font-size: 12px;
+  }
+}
+.main em {
+  color: tomato;
+}
+.main .table {
+  text-align: center;
+  margin-top: 30px;
+}
+.main .table thead .tableHeaderItem {
+  text-align: center !important;
+  font-size: 26px;
+}
+@media (max-width: 768px) {
+  .main .table thead .tableHeaderItem {
+    font-size: 18px;
+  }
+}
+@media (max-width: 490px) {
+  .main .table thead .tableHeaderItem {
+    font-size: 14px;
+  }
+}
+@media (max-width: 408px) {
+  .main .table thead .tableHeaderItem .foldable {
+    display: none;
+  }
+}
+.main .table > tbody > tr {
+  cursor: pointer;
+}
+.main .table > tbody > tr:hover {
+  background: black !important;
+}
+.main .table > tbody > tr > td {
+  vertical-align: middle;
+  font-size: 20px;
+  padding: 0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxtQkFBQTs7QUFFSjtFQUNJLGtCQUFBOztBQURKLEtBR0k7RUFDSSw0QkFBQTs7QUFFQSxRQUF5QjtFQXdFakMsS0EzRUk7SUFJUSxlQUFBOzs7QUFFSixRQUF5QjtFQXFFakMsS0EzRUk7SUFPUSxlQUFBOzs7QUFWWixLQWNJO0VBQ0ksWUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxjQUFBOztBQUVBLFFBQXlCO0VBeURqQyxLQWhFSTtJQVFRLGVBQUE7OztBQUVKLFFBQXlCO0VBc0RqQyxLQWhFSTtJQVdRLGVBQUE7OztBQUlKLFFBQXlCO0VBaURqQyxLQWxESSxFQUFDO0lBRU8sZUFBQTs7O0FBOUJaLEtBa0NJO0VBQ0ksYUFBQTs7QUFuQ1IsS0FzQ0M7RUFDRyxrQkFBQTtFQUNBLGdCQUFBOztBQXhDSixLQXNDQyxPQUlHLE1BQ0k7RUFDQSw2QkFBQTtFQUNBLGVBQUE7O0FBRUEsUUFBeUI7RUErQmpDLEtBeENDLE9BSUcsTUFDSTtJQUtJLGVBQUE7OztBQUVKLFFBQXlCO0VBNEJqQyxLQXhDQyxPQUlHLE1BQ0k7SUFRSSxlQUFBOzs7QUFJQSxRQUF5QjtFQXVCckMsS0F4Q0MsT0FJRyxNQUNJLGlCQVdBO0lBRVEsYUFBQTs7O0FBeERoQixLQXNDQyxPQXdCRyxRQUNJO0VBQ0ksZUFBQTs7QUFDQSxLQTNCWCxPQXdCRyxRQUNJLEtBRUs7RUFDRyw0QkFBQTs7QUFsRWhCLEtBc0NDLE9Bd0JHLFFBQ0ksS0FNSTtFQUNJLHNCQUFBO0VBQ0EsZUFBQTtFQUNBLFVBQUEiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
