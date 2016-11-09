@@ -23,7 +23,6 @@ const INITIAL_STATE = {
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
       case CURRENCY_ITEMS:
-      console.log(action)
         return { ...state, items: [...action.payload] };
 
       case FETCH_CURRENCY_M0:

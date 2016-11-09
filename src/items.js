@@ -122,5 +122,9 @@ export const items = [
     {
         currency: 'Euro',
         abbreviation: 'EUR'
+    },
+    {
+        currency: 'United States Dollar',
+        abbreviation: 'USD'
     }
 ];

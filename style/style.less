@@ -86,8 +86,116 @@
                 vertical-align: middle;
                 font-size: 20px;
                 padding: 5px;
+
+                > span {
+                    font-size: 14px;
+
+                    @media(max-width: 785px) {
+                        font-size: 12px;
+                    }
+                    @media(max-width: 560px) {
+                        display: none;
+                    }
+                }
             }
         }
     }
 }
+}
+
+.searchProductInputAndButtonWrapper {
+    margin: 0 auto;
+}
+.searchProductForm {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+}
+.searchProductInput, .searchProductButton {
+    padding: 0 10px;
+}
+.searchProductInput, .searchProductButton {
+    height: 35px;
+    font-size: 16px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    background: white;
+}
+.searchProductInput {
+    width: 400px;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.searchProductInput:focus, .searchProductButton:focus {
+    outline: none;
+}
+.searchProductButton {
+    border-left: none;
+    background: #d3d3d3;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.searchProductButton:hover {
+    background: #333;
+    color: #f0f0f0;
+}
+.typeaheadOptionsList {
+    position: absolute;
+    border: none;
+    border-top: none;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    width: 400px;
+    left: 12px;
+    padding-left: 0;
+}
+.typeaheadOptionsListItem {
+    list-style-type: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 99;
+    background: white;
+}
+.typeaheadOptionsListItem:nth-child(odd) {
+    background: #f0f0f0;
+}
+.typeaheadOptionsListItem:hover {
+    background: #d3d3d3;
+}
+
+/* ..................... SEARCH BAR MEDIA PROPERTIES .................................. */
+
+@media (max-width: 560px) {
+    .searchProductForm {
+        width: 375px;
+    }
+    .searchProductInput, .typeaheadOptionsList {
+        width: 300px;
+    }
+    .searchProductInput, .searchProductButton {
+        font-size: 14px;
+    }
+    input::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+}
+@media (max-width: 410px) {
+    .searchProductForm {
+        width: 325px;
+    }
+    .searchProductInput, .typeaheadOptionsList {
+        width: 250px;
+    }
+    input::-webkit-input-placeholder {
+        font-size: 10px;
+    }
+}
+/* ------------------------------ END SEARCH BAR ----------------------------------- */
+/* ================================ PAGE DESCRIPTION SECTION ==================================== */
+.pageDescription {
+    padding: 50px 10px;
 }

@@ -15,7 +15,8 @@ import {
     fetchCurrencyM6
 } from '../actions';
 
-import axios from 'axios';
+import SearchBar from './SearchBar';
+
 class CurrencyList extends Component {
 
     componentDidMount() {
@@ -43,7 +44,7 @@ class CurrencyList extends Component {
     }
 
     renderCurrencyList() {
-        const { m0, m1, m2, m3, m4, m5, m6 } = this.props.currency;
+        const { items, m0, m1, m2, m3, m4, m5, m6 } = this.props.currency;
 
         // if data is not ready yet, show spinner
         if (!m6.base) {
@@ -59,6 +60,7 @@ class CurrencyList extends Component {
             <h1>Today 1 {m0.base} is wroth:</h1>
             <p>Need rates in relationship to another currency?</p>
             <p className="pp">Select the desired currency directly from the table bellow</p>
+            <SearchBar/>
             <table className="table table-striped table-inverse currencyTable">
                 <thead>
                     <tr className="thead-inverse">
@@ -93,9 +95,14 @@ class CurrencyList extends Component {
             }
         });
 
+        const findFullCurrency = cur => {
+            const itemToReturn = this.props.currency.items.find(item => item.abbreviation === cur);
+            return itemToReturn.currency;
+        }
+
         return generalArr.map( ({currency, rates}) => {
             return <tr key={currency} onClick={() => this.getData(currency)}>
-                <td>{currency}</td>
+                <td>{currency} <span>({findFullCurrency(currency)})</span></td>
                 <td>{rates[0].toFixed(2)}</td>
                 <td>
                     <Sparklines data={rates.reverse()} className="graph">
@@ -107,7 +114,6 @@ class CurrencyList extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 {this.renderCurrencyList()}

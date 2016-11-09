@@ -90,4 +90,117 @@
   font-size: 20px;
   padding: 5px;
 }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxtQkFBQTs7QUFFSjtFQUNJLGFBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTs7QUFFSjtFQUNJLGtCQUFBOztBQURKLEtBR0k7RUFDSSw0QkFBQTs7QUFFQSxRQUF5QjtFQThFakMsS0FqRkk7SUFJUSxlQUFBOzs7QUFFSixRQUF5QjtFQTJFakMsS0FqRkk7SUFPUSxlQUFBOzs7QUFWWixLQWNJO0VBQ0ksWUFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxjQUFBOztBQUVBLFFBQXlCO0VBK0RqQyxLQXRFSTtJQVFRLGVBQUE7OztBQUVKLFFBQXlCO0VBNERqQyxLQXRFSTtJQVdRLGVBQUE7OztBQUlKLFFBQXlCO0VBdURqQyxLQXhESSxFQUFDO0lBRU8sZUFBQTs7O0FBOUJaLEtBa0NJO0VBQ0ksYUFBQTs7QUFuQ1IsS0FzQ0M7RUFDRyxrQkFBQTtFQUNBLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLG1CQUFBO0VBQ0EscUJBQUE7O0FBM0NKLEtBc0NDLE9BT0csTUFDSTtFQUNBLDZCQUFBO0VBQ0EsZUFBQTs7QUFFQSxRQUF5QjtFQWtDakMsS0E5Q0MsT0FPRyxNQUNJO0lBS0ksZUFBQTs7O0FBRUosUUFBeUI7RUErQmpDLEtBOUNDLE9BT0csTUFDSTtJQVFJLGVBQUE7OztBQUVKLFFBQXlCO0VBNEJqQyxLQTlDQyxPQU9HLE1BQ0k7SUFXSSxlQUFBOzs7QUFJQSxRQUF5QjtFQXVCckMsS0E5Q0MsT0FPRyxNQUNJLGlCQWNBO0lBRVEsYUFBQTs7O0FBOURoQixLQXNDQyxPQThCRyxRQUNJO0VBQ0ksZUFBQTs7QUFDQSxLQWpDWCxPQThCRyxRQUNJLEtBRUs7RUFDRyw0QkFBQTs7QUF4RWhCLEtBc0NDLE9BOEJHLFFBQ0ksS0FNSTtFQUNJLHNCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUEiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
+.main .table > tbody > tr > td > span {
+  font-size: 14px;
+}
+@media (max-width: 785px) {
+  .main .table > tbody > tr > td > span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 560px) {
+  .main .table > tbody > tr > td > span {
+    display: none;
+  }
+}
+.searchProductInputAndButtonWrapper {
+  margin: 0 auto;
+}
+.searchProductForm {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+.searchProductInput,
+.searchProductButton {
+  padding: 0 10px;
+}
+.searchProductInput,
+.searchProductButton {
+  height: 35px;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  background: white;
+}
+.searchProductInput {
+  width: 400px;
+  border-right: none;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.searchProductInput:focus,
+.searchProductButton:focus {
+  outline: none;
+}
+.searchProductButton {
+  border-left: none;
+  background: #d3d3d3;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.searchProductButton:hover {
+  background: #333;
+  color: #f0f0f0;
+}
+.typeaheadOptionsList {
+  position: absolute;
+  border: none;
+  border-top: none;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  width: 400px;
+  left: 12px;
+  padding-left: 0;
+}
+.typeaheadOptionsListItem {
+  list-style-type: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 99;
+  background: white;
+}
+.typeaheadOptionsListItem:nth-child(odd) {
+  background: #f0f0f0;
+}
+.typeaheadOptionsListItem:hover {
+  background: #d3d3d3;
+}
+/* ..................... SEARCH BAR MEDIA PROPERTIES .................................. */
+@media (max-width: 560px) {
+  .searchProductForm {
+    width: 375px;
+  }
+  .searchProductInput,
+  .typeaheadOptionsList {
+    width: 300px;
+  }
+  .searchProductInput,
+  .searchProductButton {
+    font-size: 14px;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+}
+@media (max-width: 410px) {
+  .searchProductForm {
+    width: 325px;
+  }
+  .searchProductInput,
+  .typeaheadOptionsList {
+    width: 250px;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 10px;
+  }
+}
+/* ------------------------------ END SEARCH BAR ----------------------------------- */
+/* ================================ PAGE DESCRIPTION SECTION ==================================== */
+.pageDescription {
+  padding: 50px 10px;
+}
+/*# sourceMappingURL=data:application/json;base64,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 */
