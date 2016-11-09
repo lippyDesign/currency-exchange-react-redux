@@ -4,7 +4,16 @@ import { bindActionCreators } from 'redux';
 import moment from 'moment';
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 
-import { fetchCurrencyM0, fetchCurrencyM1, fetchCurrencyM2, fetchCurrencyM3, fetchCurrencyM4, fetchCurrencyM5, fetchCurrencyM6 } from '../actions';
+import {
+    fetchItems,
+    fetchCurrencyM0,
+    fetchCurrencyM1,
+    fetchCurrencyM2,
+    fetchCurrencyM3,
+    fetchCurrencyM4,
+    fetchCurrencyM5,
+    fetchCurrencyM6
+} from '../actions';
 
 import axios from 'axios';
 class CurrencyList extends Component {
@@ -14,7 +23,7 @@ class CurrencyList extends Component {
     }
 
     getData(currency) {
-
+    
         const m0 = moment().subtract(0, 'days').format().substr(0, 10);
         const m1 = moment().subtract(1, 'days').format().substr(0, 10);
         const m2 = moment().subtract(2, 'days').format().substr(0, 10);
@@ -23,6 +32,7 @@ class CurrencyList extends Component {
         const m5 = moment().subtract(5, 'days').format().substr(0, 10);
         const m6 = moment().subtract(6, 'days').format().substr(0, 10);
         
+        this.props.fetchItems();
         this.props.fetchCurrencyM0(currency, m0);
         this.props.fetchCurrencyM1(currency, m1);
         this.props.fetchCurrencyM2(currency, m2);
@@ -88,7 +98,7 @@ class CurrencyList extends Component {
                 <td>{currency}</td>
                 <td>{rates[0].toFixed(2)}</td>
                 <td>
-                    <Sparklines data={rates.reverse()} width={70} height={18}>
+                    <Sparklines data={rates.reverse()} className="graph">
                         <SparklinesLine color="white" />
                     </Sparklines>
                 </td>
@@ -97,7 +107,7 @@ class CurrencyList extends Component {
     }
 
     render() {
-        
+        console.log(this.props)
         return (
             <div>
                 {this.renderCurrencyList()}
@@ -111,7 +121,7 @@ function mapStateToProps({ currency }) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchCurrencyM0, fetchCurrencyM1, fetchCurrencyM2, fetchCurrencyM3, fetchCurrencyM4, fetchCurrencyM5, fetchCurrencyM6 }, dispatch);
+    return bindActionCreators({ fetchItems, fetchCurrencyM0, fetchCurrencyM1, fetchCurrencyM2, fetchCurrencyM3, fetchCurrencyM4, fetchCurrencyM5, fetchCurrencyM6 }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CurrencyList);
