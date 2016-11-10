@@ -60,21 +60,36 @@ class SearchBar extends Component {
         }
     }
     typeaheadOptionSelected(option) {
-        console.log(option)
         this.setState({
-            term: option,
             searchOptionSelected: true
-        })
+        });
+
+        this.refs.searchProductInput.value = option;
+
+        return this.onFormSubmit();
     }
 
     onFormSubmit(event) {
-        event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
+
+        let val = this.refs.searchProductInput.value.trim().toUpperCase();
 
         this.setState({
             term: '',
             searchOptionSelected: false
         });
-        console.log('submitted')
+        
+        const validator = this.props.currency.items.find(({abbreviation, currency}) => abbreviation === val || currency.toUpperCase() === val);
+        
+        if (!validator) {
+            val = 'USD'
+        } else {
+            val = validator.abbreviation
+        }
+
+        return this.props.getData(val);
     }
 
     render() {
@@ -83,11 +98,12 @@ class SearchBar extends Component {
                 <input
                     placeholder="Search currency"
                     className="searchProductInput"
+                    ref="searchProductInput"
                     value={this.state.term}
                     onChange={this.onInputChange.bind(this)}
                 />
                 <button type="submit" className="searchProductButton">
-                    Search
+                    <i className="fa fa-search" aria-hidden="true"></i>
                 </button>
             </span>
             <ul className="typeaheadOptionsList">

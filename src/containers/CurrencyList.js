@@ -60,7 +60,9 @@ class CurrencyList extends Component {
             <h1>Today 1 {m0.base} is wroth:</h1>
             <p>Need rates in relationship to another currency?</p>
             <p className="pp">Select the desired currency directly from the table bellow</p>
-            <SearchBar/>
+
+            <SearchBar getData={this.getData.bind(this)} />
+
             <table className="table table-striped table-inverse currencyTable">
                 <thead>
                     <tr className="thead-inverse">
